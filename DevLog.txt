@@ -1,0 +1,12 @@
+CureUnityProjekt DevLog
+
+_Adam Forsell Entries:
+
+2020-10-26_23:58
+- Working on the EnemyScript, trying to have the enemy lose healthPoints when the player is on the enemy's trigger,
+but it doesn't work yet, it doesn't recognize that there is a trigger happening - did put a debug.log, but nothing.
+- Should probably rename the "enemyScript" to "EnemyScript", to have upper case first letter, might be a problem later?
+  However this should be done by copying the text inside the script, to create a new one to paste the code into.
+- Now at least the enemies(germs) are spawning at the main points, according to a random spawnTime, set to a number 
+  between 3 and 12, and that the max for how many that can be spawned per body part, is 20 by default - this needs to 
+  be polished later for having some body parts able to have more or less enemies as a total. 
