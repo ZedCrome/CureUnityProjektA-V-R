@@ -17,8 +17,9 @@ public class EnemySpawnManager : MonoBehaviour
     void Start()
     {
         spawnX1 = area.transform.position.x - 8f;
+        spawnX2 = area.transform.position.x + 8f;
 
-        spawnFrom = Vector2(Random.Range(area.transform.position.x - 8f, area.transform.position.x + 8f);
+        spawnFrom = Vector2(Random.Range(spawnX1, spawnX2));
     }
 
     // Update is called once per frame
