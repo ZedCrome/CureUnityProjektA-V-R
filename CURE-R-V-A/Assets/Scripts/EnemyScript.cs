@@ -10,10 +10,12 @@ public class EnemyScript : MonoBehaviour
 
     public float damageRate = 0.2f, nextDamage;
 
+    float nextBlink, blinkRate, minRate = 0.5f, maxRate = 12f;
+
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void OnTriggerStay2D(Collider2D col)
@@ -38,12 +40,17 @@ public class EnemyScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //if()
-        //{
-        //    animator.SetTrigger("Blink");
+        
 
-        //    animator.ResetTrigger("Blink");
-        //}
+        if(Time.time >= nextBlink)
+        {
+            blinkRate = Random.Range(minRate, maxRate);
+
+            animator.SetTrigger("Blink");
+            //animator.ResetTrigger("Blink");
+
+            nextBlink = Time.time + blinkRate;
+        }
     }
 
 
