@@ -37,7 +37,12 @@ public class EnemyScript : MonoBehaviour
     {
         if(healthPoints < 1)
         {
-            Destroy(gameObject);
+            animator.SetTrigger("Disappearing");
+
+            Debug.Log("Playing Disappearing anim");
+
+            // if(animator.GetCurrentAnimatorClipInfo)
+            // {Destroy(gameObject);}
         }
 
         
