@@ -72,7 +72,7 @@ public class EnemySpawnManager : MonoBehaviour
     }
 
 
-    void CauseDamage()
+    void TakeDamage()
     {
         if(amountOfEnemies > 0 && amountOfEnemies < damageLevel && Time.time > nextDamage)
         {

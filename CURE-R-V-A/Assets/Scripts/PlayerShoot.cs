@@ -44,9 +44,9 @@ public class PlayerShoot : MonoBehaviour
             emissionRate = emission.rateOverTime.constant;
 
 
-            if (emissionRate > 100)
+            if (emissionRate > 50)
             {
-                emissionRate = emissionRate - 20;
+                emissionRate = emissionRate - 15;
                 emission.rateOverTime = emissionRate;
                 Debug.Log(emissionRate);
 
@@ -64,7 +64,7 @@ public class PlayerShoot : MonoBehaviour
 
             if (regenTimer < Time.time)
             {
-                emissionRate += 30;
+                emissionRate += 20;
                 emission.rateOverTime = emissionRate;
 
                 regenTimer = Time.time + coolDownPeriod;
