@@ -9,7 +9,7 @@ public class PlayerShoot : MonoBehaviour
 
     [SerializeField] private ParticleSystem.EmissionModule emission;
 
-    [SerializeField] private float emissionRate = 100;
+    [SerializeField] private float emissionRate;
 
     public Transform gun;
     public GameObject bulletPrefab;
@@ -44,9 +44,9 @@ public class PlayerShoot : MonoBehaviour
             emissionRate = emission.rateOverTime.constant;
 
 
-            if (emissionRate > 16)
+            if (emissionRate > 100)
             {
-                emissionRate = emissionRate - 2;
+                emissionRate = emissionRate - 20;
                 emission.rateOverTime = emissionRate;
                 Debug.Log(emissionRate);
 
@@ -58,13 +58,13 @@ public class PlayerShoot : MonoBehaviour
 
     void RegenBody()
     {
-        if (timeSinceLastShot <= Time.time && emissionRate < 99)
+        if (timeSinceLastShot <= Time.time && emissionRate < 799)
         {
             emissionRate = emission.rateOverTime.constant;
 
             if (regenTimer < Time.time)
             {
-                emissionRate += 1;
+                emissionRate += 30;
                 emission.rateOverTime = emissionRate;
 
                 regenTimer = Time.time + coolDownPeriod;
