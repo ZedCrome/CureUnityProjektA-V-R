@@ -625,7 +625,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.1
+  m_EdgeRadius: 0.3
   m_Points:
   - {x: -0.5, y: -0.2000454}
   - {x: -0.5, y: 0.5}
@@ -825,7 +825,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 603369946261403510, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
   m_PrefabInstance: {fileID: 1648307772}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &396452001
+--- !u!95 &396452003
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

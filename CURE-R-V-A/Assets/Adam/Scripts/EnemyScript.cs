@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    Animator animator;
+
     public int healthPoints = 20;
 
     public float damageRate = 0.2f, nextDamage;
+
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void OnTriggerStay2D(Collider2D col)
     {
@@ -17,7 +25,6 @@ public class EnemyScript : MonoBehaviour
                 healthPoints --;
 
                 nextDamage = Time.time + damageRate;
-
             }
         }
 
@@ -30,13 +37,12 @@ public class EnemyScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Bullet")
+        if()
         {
-            healthPoints = healthPoints - 5;
+            animator.SetTrigger("Blink");
+
+            animator.ResetTrigger("Blink");
         }
     }
 
