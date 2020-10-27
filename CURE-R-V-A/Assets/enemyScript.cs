@@ -8,9 +8,9 @@ public class enemyScript : MonoBehaviour
 
     public float damageRate = 0.2f, nextDamage;
 
-    void OnTriggerStay(Collider col)
+    void OnTriggerStay(Collider collision)
     {
-        if(col.tag == "Player")
+        if(collision.tag == "Player")
         {
             if(Time.time > nextDamage)
             {

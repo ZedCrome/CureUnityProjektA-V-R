@@ -35,15 +35,19 @@ public class PlayerShoot : MonoBehaviour
         if (Input.GetButton("Fire1") && reload <= Time.time)
         {
 
-            GameObject newBullet = Instantiate(bulletPrefab, gun.transform.position, gun.transform.rotation);
-            newBullet.GetComponent<Rigidbody2D>().velocity = gun.transform.up * bulletSpeed;
-
             reload = Time.time + coolDownPeriod;
 
             emissionRate = emission.rateOverTime.constant;
-            emissionRate--;
-            emission.rateOverTime = emissionRate;
-            Debug.Log(emissionRate);
+
+            if (emissionRate > 16)
+            {
+                emissionRate = emissionRate - 2;
+                emission.rateOverTime = emissionRate;
+                Debug.Log(emissionRate);
+
+                GameObject newBullet = Instantiate(bulletPrefab, gun.transform.position, gun.transform.rotation);
+                newBullet.GetComponent<Rigidbody2D>().velocity = gun.transform.up * bulletSpeed;
+            } 
         }
     }
 }
