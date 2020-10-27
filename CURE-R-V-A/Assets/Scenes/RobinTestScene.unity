@@ -5837,6 +5837,7 @@ MonoBehaviour:
   reload: 0
   timeSinceLastShot: 1
   coolDownPeriod: 0.125
+  rechargeTimer: 1
 --- !u!114 &1540911256
 MonoBehaviour:
   m_ObjectHideFlags: 0
