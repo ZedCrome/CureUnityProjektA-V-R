@@ -113,5 +113,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 20
-  damageRate: 0.2
+  damageRate: 0.1
   nextDamage: 0
