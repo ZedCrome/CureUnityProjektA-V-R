@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawnManager : MonoBehaviour
 {
-    public enemyScript enemyPrefab;
+    public EnemyScript enemyPrefab;
 
     public float spawnFrom;
     public float spawnTo;
@@ -42,7 +42,7 @@ public class EnemySpawnManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        enemyScript[] enemies = FindObjectsOfType<enemyScript>();
+        EnemyScript[] enemies = FindObjectsOfType<EnemyScript>();
 
         for (int i = 0; i < enemies.Length; i++)
         {
