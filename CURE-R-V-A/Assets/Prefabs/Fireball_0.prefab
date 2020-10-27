@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5128889417986389151}
   m_Layer: 0
   m_Name: Fireball_0
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,4 +143,4 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1.0016537, y: 1.6163862}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.03
