@@ -38,13 +38,21 @@ public class EnemyScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if()
-        {
-            animator.SetTrigger("Blink");
+        //if()
+        //{
+        //    animator.SetTrigger("Blink");
 
-            animator.ResetTrigger("Blink");
-        }
+        //    animator.ResetTrigger("Blink");
+        //}
     }
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Bullet")
+        {
+            healthPoints -= 5;
+        }
+    }
 
 }
