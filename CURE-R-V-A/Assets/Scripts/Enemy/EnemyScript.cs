@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    CircleCollider2D collider;
+
     public EnemySpawnManager enemySpawnManager;
 
     Animator animator;
@@ -20,6 +22,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        collider = GetComponent<CircleCollider2D>();
     }
 
     void OnTriggerStay2D(Collider2D col)
@@ -45,6 +48,9 @@ public class EnemyScript : MonoBehaviour
 
             EnemySpawnManager.amountOfEnemies --;
             enemySpawnManager.enemyCount--;
+
+            //disables Collider
+            collider.enabled = !collider.enabled;
             
 
             //Debug.Log("AmountOfEnemies: " + EnemySpawnManager.amountOfEnemies);
@@ -70,7 +76,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (collision.tag == "Bullet")
         {
-            healthPoints -= 5;
+            healthPoints -= 10;
         }
     }
 
