@@ -31,7 +31,7 @@ public class EnemyScript : MonoBehaviour
         {
             if(Time.time > nextDamage)
             {
-                healthPoints --;
+                healthPoints -= 3;
 
                 nextDamage = Time.time + damageRate;
             }
