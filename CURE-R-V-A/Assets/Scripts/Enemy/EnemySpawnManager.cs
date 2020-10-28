@@ -12,10 +12,9 @@ public class EnemySpawnManager : MonoBehaviour
     [SerializeField] float minSpawnTime;
     [SerializeField] float maxSpawnTime;
 
-    [SerializeField] int maxEnemyNumber = 1, healthPoints = 100, damageLevel = 5;
+    [SerializeField] int maxEnemyNumber = 1;
 
-    float spawnX1, spawnX2, spawnY1, spawnY2, spawnTime, currentTime,
-    damageRate = 3, nextDamage;
+    float spawnX1, spawnX2, spawnY1, spawnY2, spawnTime, currentTime;
 
     public static int amountOfEnemies;
 

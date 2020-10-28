@@ -60,10 +60,10 @@ public class Health : MonoBehaviour
         {
             if (bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount >= 3 && healthTimer < Time.time)
             {
-                TakeDamage(1);
+                TakeDamage(bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount);
                 healthTimer = Time.time + damageRate;
             }
-            Debug.Log("Amount of enemies " + bodyParts[i] + " " + bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount);
+            //Debug.Log("Amount of enemies " + bodyParts[i] + " " + bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount);
 
         }
     }
