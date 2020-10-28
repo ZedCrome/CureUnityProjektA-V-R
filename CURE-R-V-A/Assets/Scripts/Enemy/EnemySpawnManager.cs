@@ -9,8 +9,8 @@ public class EnemySpawnManager : MonoBehaviour
     public float spawnFrom;
     public float spawnTo;
 
-    [SerializeField] float minSpawnTime = 3f;
-    [SerializeField] float maxSpawnTime = 12f;
+    [SerializeField] float minSpawnTime;
+    [SerializeField] float maxSpawnTime;
 
     [SerializeField] int maxEnemyNumber = 1, healthPoints = 100, damageLevel = 5;
 
@@ -30,6 +30,8 @@ public class EnemySpawnManager : MonoBehaviour
         spawnY1 = transform.localPosition.y - transform.localScale.y/2;
         spawnY2 = transform.localPosition.y + transform.localScale.y/2;
         amountOfEnemies = 1;
+        minSpawnTime = 10f;
+        maxSpawnTime = 10f;
     }
 
 
@@ -63,6 +65,7 @@ public class EnemySpawnManager : MonoBehaviour
             SetSpawnTime();
 
             amountOfEnemies ++;
+            Debug.Log(Time.time);
         }
     }
 

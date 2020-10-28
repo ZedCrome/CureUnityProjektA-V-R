@@ -8,8 +8,8 @@ public class Health : MonoBehaviour
     public GameObject heart;
 
     public int maxHealth = 100;
-    public int currentHealth;
     private static int enemyAmount;
+    public int currentHealth;
 
     private float healthTimer;
     private float damageRate = 0.5f;
@@ -23,17 +23,13 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemyAmount = EnemySpawnManager.amountOfEnemies;
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    TakeDamage(20);
-        //}
+     
         Debug.Log(enemyAmount);
 
-        if (enemyAmount >= 14 && healthTimer < Time.time + healthTimer)
+        if (EnemySpawnManager.amountOfEnemies >= 14 && healthTimer < Time.time)
         {
             TakeDamage(1);
-            healthTimer = Time.time + healthTimer;
+            healthTimer = Time.time + damageRate;
         }
     }
 

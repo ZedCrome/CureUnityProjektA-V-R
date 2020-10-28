@@ -190,6 +190,14 @@ PrefabInstance:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: -8177169553120032240, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: minSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: maxSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: LeftLung
@@ -271,8 +279,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92393274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 1}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: 0, y: 0.5632, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.134, z: 1}
   m_Children: []
   m_Father: {fileID: 2074112453}
   m_RootOrder: 1
@@ -2263,6 +2271,14 @@ PrefabInstance:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: -8177169553120032240, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: minSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: maxSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: LeftFoot
@@ -2364,6 +2380,14 @@ PrefabInstance:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: -8177169553120032240, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: minSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: maxSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: SexOrgan
@@ -3233,6 +3257,14 @@ PrefabInstance:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: -8177169553120032240, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: minSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: maxSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: LeftHand
@@ -3273,7 +3305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838993522}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.922}
+  m_LocalPosition: {x: 0, y: 0, z: -0.829}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1059451163}
@@ -3804,6 +3836,14 @@ PrefabInstance:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: -8177169553120032240, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: minSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: maxSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: Brain
@@ -9453,7 +9493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 302ab530ad263184e928f87bd000b9b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 15
 --- !u!114 &1059451167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9466,6 +9506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f005c2f7bb59e064aab57fbcc0b8da02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heart: {fileID: 0}
   maxHealth: 100
   currentHealth: 0
   healthbar: {fileID: 1112818276}
@@ -10629,6 +10670,14 @@ PrefabInstance:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: -8177169553120032240, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: minSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: maxSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: RightLung
@@ -11119,6 +11168,14 @@ PrefabInstance:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: -8177169553120032240, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: minSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: maxSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: HeartEnemySpawn
@@ -11333,6 +11390,14 @@ PrefabInstance:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: -8177169553120032240, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: minSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: maxSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: RightFoot
@@ -11890,6 +11955,14 @@ PrefabInstance:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: -8177169553120032240, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: minSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: maxSpawnTime
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: RightHand
