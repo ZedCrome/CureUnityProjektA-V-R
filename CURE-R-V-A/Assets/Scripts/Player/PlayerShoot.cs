@@ -48,7 +48,6 @@ public class PlayerShoot : MonoBehaviour
             {
                 emissionRate = emissionRate - 15;
                 emission.rateOverTime = emissionRate;
-                Debug.Log(emissionRate);
 
                 GameObject newBullet = Instantiate(bulletPrefab, gun.transform.position, gun.transform.rotation);
                 newBullet.GetComponent<Rigidbody2D>().velocity = gun.transform.up * bulletSpeed;

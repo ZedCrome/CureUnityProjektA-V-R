@@ -12,6 +12,8 @@ public class EnemyScript : MonoBehaviour
 
     float nextBlink, blinkRate, minRate = 0.5f, maxRate = 12f;
 
+    bool isDead = false;
+
 
     void Start()
     {
@@ -35,14 +37,15 @@ public class EnemyScript : MonoBehaviour
 
     void Update()
     {
-        if(healthPoints < 1)
+        if(healthPoints < 1 && !isDead)
         {
             animator.SetTrigger("Disappearing");
 
-            Debug.Log("Playing Disappearing anim");
+            EnemySpawnManager.amountOfEnemies --;
 
-            // if(animator.GetCurrentAnimatorClipInfo)
-            // {Destroy(gameObject);}
+            Debug.Log("AmountOfEnemies: " + EnemySpawnManager.amountOfEnemies);
+
+            isDead = true;
         }
 
         
