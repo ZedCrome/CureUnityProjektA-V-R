@@ -40,8 +40,14 @@ public class Health : MonoBehaviour
         chestEnemies = bodyParts[8].GetComponent<EnemySpawnManager>().enemyCount +
         bodyParts[5].GetComponent<EnemySpawnManager>().enemyCount + bodyParts[6].GetComponent<EnemySpawnManager>().enemyCount;
 
-        CheckBodyParts();
-        Debug.Log(currentHealth);
+        if (currentHealth >= 0)
+        {
+            CheckBodyParts();
+        }
+        // else if (currentHealth == 0)  
+        // {
+            
+        // }
     }
 
 
@@ -59,15 +65,19 @@ public class Health : MonoBehaviour
 
             if (bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount >= 1 && healthTimer < Time.time)
             {
-                if (i == 8 || i == 6 || i == 5 && chestEnemies > 3)
+                if ((i == 8 || i == 6 || i == 5) && chestEnemies >= 5)
                 {
                     TakeDamage(chestEnemies);
                     healthTimer = Time.time + damageRate;
                 }
-                else if (bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount >= 3)
+                
+                for (int j = 0; j < bodyParts.Length; j++)
                 {
-                    TakeDamage(bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount);
-                    healthTimer = Time.time + damageRate;
+                    if (bodyParts[j].GetComponent<EnemySpawnManager>().enemyCount >= 3 && (j != 8 || j != 6 || j != 5))
+                    {
+                        TakeDamage(bodyParts[j].GetComponent<EnemySpawnManager>().enemyCount/2);
+                        healthTimer = Time.time + damageRate;
+                    }
                 }
             }
         }

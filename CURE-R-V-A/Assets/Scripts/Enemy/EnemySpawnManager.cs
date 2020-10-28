@@ -31,9 +31,9 @@ public class EnemySpawnManager : MonoBehaviour
         spawnY1 = transform.localPosition.y - transform.localScale.y/2;
         spawnY2 = transform.localPosition.y + transform.localScale.y/2;
         amountOfEnemies = 0;
-        maxEnemyNumber = 15;
-        minSpawnTime = 10f;
-        maxSpawnTime = 10f;
+        maxEnemyNumber = 30;
+        minSpawnTime = 8f;
+        maxSpawnTime = 12f;
         currentTime = Time.time;
     }
 
