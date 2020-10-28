@@ -43,7 +43,7 @@ public class EnemyScript : MonoBehaviour
 
             EnemySpawnManager.amountOfEnemies --;
 
-            Debug.Log("AmountOfEnemies: " + EnemySpawnManager.amountOfEnemies);
+            //Debug.Log("AmountOfEnemies: " + EnemySpawnManager.amountOfEnemies);
 
             isDead = true;
         }

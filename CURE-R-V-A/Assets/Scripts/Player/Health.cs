@@ -23,8 +23,8 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
-        Debug.Log(enemyAmount);
+
+        //Debug.Log("Amount of Enemies: " + EnemySpawnManager.amountOfEnemies);
 
         if (EnemySpawnManager.amountOfEnemies >= 14 && healthTimer < Time.time)
         {
@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    void TakeDamage(int damage)
+    public static void TakeDamage(int damage)
     {
         currentHealth -= damage;
 

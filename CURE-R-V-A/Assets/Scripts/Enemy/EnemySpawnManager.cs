@@ -19,6 +19,8 @@ public class EnemySpawnManager : MonoBehaviour
 
     public static int amountOfEnemies;
 
+    public int enemyCount;
+
     public int randomRoof;
 
 
@@ -29,7 +31,8 @@ public class EnemySpawnManager : MonoBehaviour
         spawnX2 = transform.localPosition.x + transform.localScale.x/2;
         spawnY1 = transform.localPosition.y - transform.localScale.y/2;
         spawnY2 = transform.localPosition.y + transform.localScale.y/2;
-        amountOfEnemies = 1;
+        amountOfEnemies = 0;
+        maxEnemyNumber = 15;
         minSpawnTime = 10f;
         maxSpawnTime = 10f;
     }
@@ -65,6 +68,7 @@ public class EnemySpawnManager : MonoBehaviour
             SetSpawnTime();
 
             amountOfEnemies ++;
+            enemyCount++;
             Debug.Log(Time.time);
         }
     }
