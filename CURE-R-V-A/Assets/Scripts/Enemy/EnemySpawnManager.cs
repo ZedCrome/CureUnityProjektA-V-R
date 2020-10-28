@@ -62,7 +62,8 @@ public class EnemySpawnManager : MonoBehaviour
 
         if (currentTime + spawnTime < Time.time && amountOfEnemies < maxEnemyNumber )
         {
-            Instantiate(enemyPrefab, randomSpawnPosition, Quaternion.identity);
+            var newEnemy = Instantiate(enemyPrefab, randomSpawnPosition, Quaternion.identity);
+            newEnemy.GetComponent<EnemyScript>().enemySpawnManager = this;
 
             currentTime = Time.time;
             SetSpawnTime();
@@ -77,21 +78,5 @@ public class EnemySpawnManager : MonoBehaviour
     void SetSpawnTime()
     {
         spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
-    }
-
-
-    void TakeDamage()
-    {
-        if(amountOfEnemies > 0 && amountOfEnemies < damageLevel && Time.time > nextDamage)
-        {
-            nextDamage = Time.time + damageRate;
-            healthPoints --;
-
-            if(amountOfEnemies >= damageLevel)
-            {
-                damageLevel += 5;
-                damageRate -= 0.1f; 
-            }
-        }
     }
 }

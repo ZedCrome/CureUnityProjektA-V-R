@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    public EnemySpawnManager enemySpawnManager;
+
     Animator animator;
 
     public int healthPoints = 20;
@@ -42,6 +44,8 @@ public class EnemyScript : MonoBehaviour
             animator.SetTrigger("Disappearing");
 
             EnemySpawnManager.amountOfEnemies --;
+            enemySpawnManager.enemyCount--;
+            
 
             //Debug.Log("AmountOfEnemies: " + EnemySpawnManager.amountOfEnemies);
 
