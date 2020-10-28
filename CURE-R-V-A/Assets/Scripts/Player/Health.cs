@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 public class Health : MonoBehaviour
 {
     public int brainEnemies, heartEnemies, leftLungEnemies, rightLungEnemies, leftHandEnemies, rightHandEnemies, leftFootEnemies, rightFootEnemies, sexOrganEnemies;
+    public int chestEnemies;
 
     public GameObject[] bodyParts = new GameObject[9];
 
@@ -36,11 +37,8 @@ public class Health : MonoBehaviour
         sexOrganEnemies = bodyParts[7].GetComponent<EnemySpawnManager>().enemyCount;
         heartEnemies = bodyParts[8].GetComponent<EnemySpawnManager>().enemyCount;
 
-        //if (EnemySpawnManager.amountOfEnemies >= 14 && healthTimer < Time.time)
-        //{
-        //    TakeDamage(1);
-        //    healthTimer = Time.time + damageRate;
-        //}
+        chestEnemies = bodyParts[8].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[5].GetComponent<EnemySpawnManager>().enemyCount + bodyParts[6].GetComponent<EnemySpawnManager>().enemyCount;
 
         CheckBodyParts();
         Debug.Log(currentHealth);
@@ -58,13 +56,19 @@ public class Health : MonoBehaviour
     {
         for (int i = 0; i < bodyParts.Length; i++)
         {
-            if (bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount >= 3 && healthTimer < Time.time)
+            if (bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount >= 1 && healthTimer < Time.time)
             {
-                TakeDamage(bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount);
-                healthTimer = Time.time + damageRate;
+                if (i == 8 || i == 6 || i == 5)
+                {
+                    TakeDamage(chestEnemies / 2);
+                    healthTimer = Time.time + damageRate;
+                }
+                else if (bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount >= 3)
+                {
+                    TakeDamage(bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount);
+                    healthTimer = Time.time + damageRate;
+                }
             }
-            //Debug.Log("Amount of enemies " + bodyParts[i] + " " + bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount);
-
         }
     }
 }
