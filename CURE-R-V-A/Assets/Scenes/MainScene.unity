@@ -2704,6 +2704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4a6c9c4119c9546be549423f01b3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1059451157}
+  animator: {fileID: 671439732}
 --- !u!1001 &676078384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10025,6 +10027,7 @@ MonoBehaviour:
   - {fileID: 678012114}
   maxHealth: 100
   currentHealth: 0
+  totalEnemyCount: 0
   healthbar: {fileID: 1112818276}
 --- !u!43 &1082249473
 Mesh:

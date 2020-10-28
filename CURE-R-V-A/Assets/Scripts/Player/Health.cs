@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
 
     public int maxHealth;
     public int currentHealth;
+    public int totalEnemyCount;
 
     private float healthTimer;
     private float damageRate = 1f;
@@ -48,6 +49,18 @@ public class Health : MonoBehaviour
         // {
             
         // }
+
+         // Find total enemy count to set HeartBeat Animation speed
+            totalEnemyCount = 
+            bodyParts[0].GetComponent<EnemySpawnManager>().enemyCount + 
+            bodyParts[1].GetComponent<EnemySpawnManager>().enemyCount + 
+            bodyParts[2].GetComponent<EnemySpawnManager>().enemyCount +
+            bodyParts[3].GetComponent<EnemySpawnManager>().enemyCount +
+            bodyParts[4].GetComponent<EnemySpawnManager>().enemyCount +
+            bodyParts[5].GetComponent<EnemySpawnManager>().enemyCount +
+            bodyParts[6].GetComponent<EnemySpawnManager>().enemyCount +
+            bodyParts[7].GetComponent<EnemySpawnManager>().enemyCount +
+            bodyParts[8].GetComponent<EnemySpawnManager>().enemyCount;
     }
 
 
@@ -79,7 +92,7 @@ public class Health : MonoBehaviour
                         healthTimer = Time.time + damageRate;
                     }
                 }
-            }
+            }           
         }
     }
 }
