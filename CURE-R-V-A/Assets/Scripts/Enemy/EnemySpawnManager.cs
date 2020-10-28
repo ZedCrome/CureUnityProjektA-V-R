@@ -34,6 +34,7 @@ public class EnemySpawnManager : MonoBehaviour
         maxEnemyNumber = 15;
         minSpawnTime = 10f;
         maxSpawnTime = 10f;
+        currentTime = Time.time;
     }
 
 

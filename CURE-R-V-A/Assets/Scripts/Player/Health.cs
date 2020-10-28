@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
     public int currentHealth;
 
     private float healthTimer;
-    private float damageRate = 0.5f;
+    private float damageRate = 1f;
 
     public HealthBar healthbar;
 
@@ -56,11 +56,12 @@ public class Health : MonoBehaviour
     {
         for (int i = 0; i < bodyParts.Length; i++)
         {
+
             if (bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount >= 1 && healthTimer < Time.time)
             {
-                if (i == 8 || i == 6 || i == 5)
+                if (i == 8 || i == 6 || i == 5 && chestEnemies > 3)
                 {
-                    TakeDamage(chestEnemies / 2);
+                    TakeDamage(chestEnemies);
                     healthTimer = Time.time + damageRate;
                 }
                 else if (bodyParts[i].GetComponent<EnemySpawnManager>().enemyCount >= 3)
