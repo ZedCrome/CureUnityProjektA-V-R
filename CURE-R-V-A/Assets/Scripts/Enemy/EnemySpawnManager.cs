@@ -12,12 +12,12 @@ public class EnemySpawnManager : MonoBehaviour
     [SerializeField] float minSpawnTime = 3f;
     [SerializeField] float maxSpawnTime = 12f;
 
-    [SerializeField] int maxEnemyNumber = 20, healthPoints = 100, damageLevel = 5;
+    [SerializeField] int maxEnemyNumber = 1, healthPoints = 100, damageLevel = 5;
 
     float spawnX1, spawnX2, spawnY1, spawnY2, spawnTime, currentTime,
     damageRate = 3, nextDamage;
 
-    int amountOfEnemies;
+    public static int amountOfEnemies;
 
     public int randomRoof;
 
@@ -29,6 +29,7 @@ public class EnemySpawnManager : MonoBehaviour
         spawnX2 = transform.localPosition.x + transform.localScale.x/2;
         spawnY1 = transform.localPosition.y - transform.localScale.y/2;
         spawnY2 = transform.localPosition.y + transform.localScale.y/2;
+        amountOfEnemies = 1;
     }
 
 
