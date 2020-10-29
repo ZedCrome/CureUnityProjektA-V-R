@@ -5,9 +5,9 @@ using UnityEngine.Audio;
 
 public class heartBeat : MonoBehaviour
 {
-    public GameObject player;
+    [SerializeField] private GameObject player;
 
-    public Animator animator;
+    [SerializeField] Animator animator;
 
 
     void Update()

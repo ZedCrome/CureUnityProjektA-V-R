@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -11,14 +12,14 @@ public class PlayerShoot : MonoBehaviour
 
     [SerializeField] private float emissionRate;
 
-    public Transform gun;
-    public GameObject bulletPrefab;
-    public float bulletSpeed = 20f;
-    public float reload = 0f;
-    public float timeSinceLastShot = 1;
-    public float coolDownPeriod = 1f;
-    public float regenTimer = 1;
-    private Rigidbody2D rb2d;
+    [SerializeField] private Transform gun;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private float bulletSpeed = 20f;
+    [SerializeField] private float reload = 0f;
+    [SerializeField] private float timeSinceLastShot = 1;
+    [SerializeField] private float coolDownPeriod = 1f;
+    [SerializeField] private float regenTimer = 1;
+    [SerializeField] private Rigidbody2D rb2d;
 
     void Start()
     {

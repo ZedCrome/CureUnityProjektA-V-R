@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class EnemyScript : MonoBehaviour
 {
     CircleCollider2D collider;
 
     public EnemySpawnManager enemySpawnManager;
+
+    public AudioSource hit;
 
     Animator animator;
 
@@ -47,6 +50,9 @@ public class EnemyScript : MonoBehaviour
             EnemySpawnManager.amountOfEnemies --;
             enemySpawnManager.enemyCount--;
 
+
+            GetComponent<AudioSource>().pitch = 0.7f;
+            GetComponent<AudioSource>().Play();
             //disables Collider
             collider.enabled = !collider.enabled;
             
@@ -75,6 +81,7 @@ public class EnemyScript : MonoBehaviour
         if (collision.tag == "Bullet")
         {
             healthPoints -= 10;
+            GetComponent<AudioSource>().Play();
         }
     }
 

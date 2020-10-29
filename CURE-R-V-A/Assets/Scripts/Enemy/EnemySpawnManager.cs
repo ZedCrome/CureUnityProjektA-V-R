@@ -70,7 +70,6 @@ public class EnemySpawnManager : MonoBehaviour
 
             amountOfEnemies ++;
             enemyCount++;
-            Debug.Log(Time.time);
         }
     }
 

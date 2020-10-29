@@ -2,22 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    public int brainEnemies, heartEnemies, leftLungEnemies, rightLungEnemies, leftHandEnemies, rightHandEnemies, leftFootEnemies, rightFootEnemies, sexOrganEnemies;
+    [SerializeField] private int brainEnemies, heartEnemies, leftLungEnemies, rightLungEnemies, leftHandEnemies, rightHandEnemies, leftFootEnemies, rightFootEnemies, sexOrganEnemies;
     public int chestEnemies;
-
-    public GameObject[] bodyParts = new GameObject[9];
-
-    public int maxHealth;
+    [SerializeField] private int maxHealth;
     public int currentHealth;
     public int totalEnemyCount;
 
-    private float healthTimer;
-    private float damageRate = 1f;
+    [SerializeField] private float healthTimer;
+    [SerializeField] private float damageRate = 1f;
 
-    public HealthBar healthbar;
+    [SerializeField] private HealthBar healthbar;
+    [SerializeField] private GameObject[] bodyParts = new GameObject[9];
 
 
     void Start()
@@ -25,6 +24,7 @@ public class Health : MonoBehaviour
         maxHealth = 1000;
         currentHealth = maxHealth;
     }
+
 
     void Update()
     {
@@ -45,26 +45,26 @@ public class Health : MonoBehaviour
         {
             CheckBodyParts();
         }
-        // else if (currentHealth == 0)  
-        // {
-            
-        // }
+        else if (currentHealth <= 0)
+        {
+            SceneManager.LoadScene(5);
+        }
 
-         // Find total enemy count to set HeartBeat Animation speed
-            totalEnemyCount = 
-            bodyParts[0].GetComponent<EnemySpawnManager>().enemyCount + 
-            bodyParts[1].GetComponent<EnemySpawnManager>().enemyCount + 
-            bodyParts[2].GetComponent<EnemySpawnManager>().enemyCount +
-            bodyParts[3].GetComponent<EnemySpawnManager>().enemyCount +
-            bodyParts[4].GetComponent<EnemySpawnManager>().enemyCount +
-            bodyParts[5].GetComponent<EnemySpawnManager>().enemyCount +
-            bodyParts[6].GetComponent<EnemySpawnManager>().enemyCount +
-            bodyParts[7].GetComponent<EnemySpawnManager>().enemyCount +
-            bodyParts[8].GetComponent<EnemySpawnManager>().enemyCount;
+        // Find total enemy count to set HeartBeat Animation speed
+        totalEnemyCount = 
+        bodyParts[0].GetComponent<EnemySpawnManager>().enemyCount + 
+        bodyParts[1].GetComponent<EnemySpawnManager>().enemyCount + 
+        bodyParts[2].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[3].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[4].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[5].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[6].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[7].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[8].GetComponent<EnemySpawnManager>().enemyCount;
     }
 
 
-     void TakeDamage(int damage)
+    void TakeDamage(int damage)
     {
         currentHealth -= damage;
 

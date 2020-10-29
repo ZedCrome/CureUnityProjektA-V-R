@@ -6,7 +6,7 @@ public class Crosshair : MonoBehaviour
 {
     void Start()
     {
-        Cursor.visible = false;
+        Cursor.visible = !Cursor.visible;
     }
 
 
