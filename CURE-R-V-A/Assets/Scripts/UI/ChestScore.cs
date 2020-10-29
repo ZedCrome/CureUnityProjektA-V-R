@@ -3,19 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Main Author: Robin Lindevy
 public class ChestScore : MonoBehaviour
 {
-    public int bodyScore;
     [SerializeField] private GameObject bodyPart;
-
+    public int bodyScore;
     public Text scoreText;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+
     void Update()
     {
         bodyScore = bodyPart.GetComponent<Health>().chestEnemies;

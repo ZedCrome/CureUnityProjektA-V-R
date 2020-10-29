@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Main Author: Robin Lindevy
 public class PlayerFaceMouse : MonoBehaviour
 {
 
-    // Update is called once per frame
     void Update()
     {
         FaceMouse();

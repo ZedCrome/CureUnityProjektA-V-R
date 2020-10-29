@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//main Author: Robin Lindevy
+
 public class TimeDisplay : MonoBehaviour
 {
     public float timeRemaining = 20f;
@@ -14,7 +16,6 @@ public class TimeDisplay : MonoBehaviour
     public Text displayText;
 
 
-    // Update is called once per frame
     void Update()
     {
         if (currentTime < Time.time)

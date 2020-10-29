@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+//Main Author: Robin Lindevy
+
 public class heartBeat : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-
     [SerializeField] Animator animator;
 
 

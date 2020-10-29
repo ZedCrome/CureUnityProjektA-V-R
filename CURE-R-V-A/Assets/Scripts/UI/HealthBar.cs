@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Main Author: Robin Lindevy
+
 public class HealthBar : MonoBehaviour
 {
     public Slider slider;
-
 
 
     public void SetMaxHealth(int health)

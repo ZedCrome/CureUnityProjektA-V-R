@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
+//Main Author: Robin Lindevy
+
 public class Health : MonoBehaviour
 {
     [SerializeField] private int brainEnemies, heartEnemies, leftLungEnemies, rightLungEnemies, leftHandEnemies, rightHandEnemies, leftFootEnemies, rightFootEnemies, sexOrganEnemies;
@@ -70,6 +72,7 @@ public class Health : MonoBehaviour
 
         healthbar.SetHealth(currentHealth);
     }
+
 
     void CheckBodyParts()
     {

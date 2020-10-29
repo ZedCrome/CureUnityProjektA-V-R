@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Main Author: Robin Lindevy
+
 public class DissableCrosshair : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = true;
     }
-
 }

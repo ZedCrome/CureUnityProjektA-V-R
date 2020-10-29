@@ -4,35 +4,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+//Main Author: Robin Lindevy
+
 public class PlayerShoot : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem ps;
-
+    [SerializeField] private ParticleSystem particleSystem;
     [SerializeField] private ParticleSystem.EmissionModule emission;
 
-    [SerializeField] private float emissionRate;
-
-    [SerializeField] private Transform gun;
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform gun;
+
+    [SerializeField] private float emissionRate;
     [SerializeField] private float bulletSpeed = 20f;
     [SerializeField] private float reload = 0f;
     [SerializeField] private float timeSinceLastShot = 1;
     [SerializeField] private float coolDownPeriod = 1f;
     [SerializeField] private float regenTimer = 1;
-    [SerializeField] private Rigidbody2D rb2d;
+
 
     void Start()
     {
-        rb2d = bulletPrefab.GetComponent<Rigidbody2D>();
-        ps = GetComponent<ParticleSystem>();
-        emission = ps.emission;
+        particleSystem = GetComponent<ParticleSystem>();
+        emission = particleSystem.emission;
     }
+
 
     void LateUpdate()
     {
         Shoot();
         RegenBody();
     }
+
 
     void Shoot()
     {
@@ -55,6 +57,7 @@ public class PlayerShoot : MonoBehaviour
             } 
         }
     }
+
 
     void RegenBody()
     {

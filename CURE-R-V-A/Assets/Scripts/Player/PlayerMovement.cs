@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Main Author: Robin Lindevy
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
+    [SerializeField] private float speed;
     private Rigidbody2D rb2d;
 
     Vector2 move = new Vector2();
+
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
     }
+
 
     void Update()
     {
@@ -24,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         if (move.sqrMagnitude > 1)
             move = move.normalized;
     }
+
 
     void FixedUpdate()
     {

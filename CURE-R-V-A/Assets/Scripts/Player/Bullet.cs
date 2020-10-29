@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+//Main Author: Robin Lindevy
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private AudioSource fire;
+
     private void Start()
     {
         GetComponent<AudioSource>().Play();
     }
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Main Author: Robin Lindevy
+
 public class mapScore : MonoBehaviour
 {
-    public int bodyScore;
     [SerializeField] private GameObject bodyPart;
+
+    public int bodyScore;
 
     public Text scoreText;
 
-    // Update is called once per frame
+
     void Update()
     {
         bodyScore = bodyPart.GetComponent<EnemySpawnManager>().enemyCount;
