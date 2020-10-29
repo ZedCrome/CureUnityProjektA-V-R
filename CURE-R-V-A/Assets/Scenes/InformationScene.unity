@@ -421,10 +421,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'If 3 or more viruses exist in any bodypart exept heart of lounghes, the
+  m_Text: 'If 3 or more viruses exist in any bodypart except heart and lungs, the
     human will take damage.
-
-
 
 '
 --- !u!222 &874818570
