@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour
 {
 
-    public void LaunchGame()
+    public void LaunchInformationScene()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void LaunchGameScene()
+    {
+        SceneManager.LoadScene(2);
     }
 
 

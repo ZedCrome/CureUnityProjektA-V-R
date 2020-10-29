@@ -842,6 +842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4a6c9c4119c9546be549423f01b3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!82 &1166041395
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1316,8 +1318,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 493067001}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: LaunchGame
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: LaunchInformationScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

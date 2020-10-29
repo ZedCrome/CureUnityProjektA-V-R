@@ -88,7 +88,7 @@ public class Health : MonoBehaviour
                 {
                     if (bodyParts[j].GetComponent<EnemySpawnManager>().enemyCount >= 3 && (j != 8 || j != 6 || j != 5))
                     {
-                        TakeDamage(bodyParts[j].GetComponent<EnemySpawnManager>().enemyCount/2);
+                        TakeDamage(bodyParts[j].GetComponent<EnemySpawnManager>().enemyCount);
                         healthTimer = Time.time + damageRate;
                     }
                 }
