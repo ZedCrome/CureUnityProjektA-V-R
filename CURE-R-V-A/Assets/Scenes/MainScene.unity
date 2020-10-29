@@ -1133,8 +1133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41785a93942aa7e4ba6f3f891cbef2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyScore: 0
   bodyPart: {fileID: 507012926}
+  bodyScore: 0
   scoreText: {fileID: 206267468}
 --- !u!114 &206267468
 MonoBehaviour:
@@ -2177,63 +2177,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355097391}
   m_CullTransparentMesh: 0
---- !u!1001 &371428897
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 528622593654802501, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
-      propertyPath: m_Name
-      value: EnemyParent
-      objectReference: {fileID: 0}
-    - target: {fileID: 7066052420182547515, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7066052420182547515, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7066052420182547515, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7066052420182547515, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7066052420182547515, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7066052420182547515, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7066052420182547515, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7066052420182547515, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7066052420182547515, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7066052420182547515, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7066052420182547515, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 479d31fa3f9d217459d51f63a43a3b26, type: 3}
 --- !u!1 &431957823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2519,8 +2462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65c3d0ac95423f428fd7a6a11057cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyScore: 0
   bodyPart: {fileID: 1059451157}
+  bodyScore: 0
   scoreText: {fileID: 597907092}
 --- !u!114 &597907092
 MonoBehaviour:
@@ -2614,8 +2557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41785a93942aa7e4ba6f3f891cbef2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyScore: 0
   bodyPart: {fileID: 2056632299}
+  bodyScore: 0
   scoreText: {fileID: 652519739}
 --- !u!114 &652519739
 MonoBehaviour:
@@ -8824,8 +8767,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41785a93942aa7e4ba6f3f891cbef2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyScore: 0
   bodyPart: {fileID: 74889391}
+  bodyScore: 0
   scoreText: {fileID: 948696187}
 --- !u!114 &948696187
 MonoBehaviour:
@@ -14560,10 +14503,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7c10fdb89ab3c45b88e2041438e82a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ps: {fileID: 1059451160}
-  emissionRate: 100
-  gun: {fileID: 1214212685}
+  particleSystem: {fileID: 0}
   bulletPrefab: {fileID: 5128889417986389150, guid: 863c35a9c8d73bc43b42b29c8b31e8c2, type: 3}
+  gun: {fileID: 1214212685}
+  emissionRate: 100
   bulletSpeed: 20
   reload: 0
   timeSinceLastShot: 1
@@ -14616,6 +14559,12 @@ MonoBehaviour:
   rightFootEnemies: 0
   sexOrganEnemies: 0
   chestEnemies: 0
+  maxHealth: 100
+  currentHealth: 0
+  totalEnemyCount: 0
+  healthTimer: 0
+  damageRate: 1
+  healthbar: {fileID: 1112818276}
   bodyParts:
   - {fileID: 1865750345}
   - {fileID: 74889391}
@@ -14626,10 +14575,6 @@ MonoBehaviour:
   - {fileID: 1815060238}
   - {fileID: 507012926}
   - {fileID: 678012114}
-  maxHealth: 100
-  currentHealth: 0
-  totalEnemyCount: 0
-  healthbar: {fileID: 1112818276}
 --- !u!1 &1099920317
 GameObject:
   m_ObjectHideFlags: 0
@@ -15638,8 +15583,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41785a93942aa7e4ba6f3f891cbef2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyScore: 0
   bodyPart: {fileID: 715389172}
+  bodyScore: 0
   scoreText: {fileID: 1165291423}
 --- !u!114 &1165291423
 MonoBehaviour:
@@ -16266,8 +16211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41785a93942aa7e4ba6f3f891cbef2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyScore: 0
   bodyPart: {fileID: 1865750345}
+  bodyScore: 0
   scoreText: {fileID: 1348576409}
 --- !u!114 &1348576409
 MonoBehaviour:
@@ -17689,8 +17634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41785a93942aa7e4ba6f3f891cbef2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyScore: 0
   bodyPart: {fileID: 1482175458}
+  bodyScore: 0
   scoreText: {fileID: 1786300233}
 --- !u!43 &1787892353
 Mesh:
@@ -18008,6 +17953,10 @@ PrefabInstance:
       propertyPath: maxSpawnTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: timeCounter
+      value: 
+      objectReference: {fileID: 1128084187}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: RightHand
