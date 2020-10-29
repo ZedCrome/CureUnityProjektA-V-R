@@ -36,8 +36,6 @@ public class EnemyScript : MonoBehaviour
                 nextDamage = Time.time + damageRate;
             }
         }
-
-        Debug.Log("Touching Player");
     }
 
     void Update()
