@@ -43,6 +43,13 @@ public class Health : MonoBehaviour
         {
             SceneManager.LoadScene(5);
         }
+
+        //TEMPORARY CODE
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            currentHealth = 20;
+        }
+
     }
 
 
