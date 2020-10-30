@@ -34,11 +34,6 @@ public class TimeDisplay : MonoBehaviour
             SceneManager.LoadScene(6);
         }
 
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            timeRemaining = 3;
-        }
-
         PauseGame();
     }
 
