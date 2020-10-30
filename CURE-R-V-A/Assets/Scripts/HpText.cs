@@ -22,6 +22,6 @@ public class HpText : MonoBehaviour
     {
         hpText = player.GetComponent<Health>().currentHealth;
 
-        hp.text = hpText.ToString() + "/1000";
+        hp.text = hpText.ToString() + "/800";
     }
 }
