@@ -272,7 +272,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: " - Enemy Spawn Manager + Art\n - Level design / Animations\n - Design\n"
+  m_Text: " - Everything correlating to Enemies + Art\n - Level design / Animations\n
+    - Design\n - Menu\n"
 --- !u!222 &514915985
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -731,7 +732,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: " - Player Movement + Art\n - UI\n - Sound\n"
+  m_Text: " - Everything correlating to the Player + Art\n - UI\n - Sound\n - Menu"
 --- !u!222 &1155172839
 CanvasRenderer:
   m_ObjectHideFlags: 0
