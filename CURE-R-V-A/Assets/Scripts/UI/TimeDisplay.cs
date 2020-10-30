@@ -14,6 +14,9 @@ public class TimeDisplay : MonoBehaviour
 
     [SerializeField] private GameObject scoreDisplay;
     public Text displayText;
+    public Text pauseText;
+
+    bool pause = false;
 
 
     void Update()
@@ -34,6 +37,43 @@ public class TimeDisplay : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             timeRemaining = 3;
+        }
+
+        PauseGame();
+    }
+
+
+    void PauseGame()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !pause)
+        {
+            pause = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && pause)
+        {
+            pause = false;
+        }
+
+        if (pause)
+        {
+            Time.timeScale = 0;
+
+            Cursor.visible = true;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            
+            Cursor.visible = false;
+        }
+
+        if (Time.timeScale == 0)
+        {
+            pauseText.text = "Game is Paused";
+        }
+        else
+        {
+            pauseText.text = "";
         }
     }
 }
