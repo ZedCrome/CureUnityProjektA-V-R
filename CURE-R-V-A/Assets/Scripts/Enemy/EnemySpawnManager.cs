@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySpawnManager : MonoBehaviour
 {
     public EnemyScript enemyPrefab;
+    public GameObject time;
 
     public float spawnFrom;
     public float spawnTo;
@@ -43,6 +44,11 @@ public class EnemySpawnManager : MonoBehaviour
     {
         spawnFrom = Random.Range(spawnX1, spawnX2);
         spawnTo = Random.Range(spawnY1, spawnY2);
+        if (time.GetComponent<TimeDisplay>().timeRemaining <= 60)
+        {
+            minSpawnTime = 5f;
+            maxSpawnTime = 9;
+        }
     }
 
 

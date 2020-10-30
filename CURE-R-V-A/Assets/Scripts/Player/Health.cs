@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -8,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
+
     [SerializeField] private int brainEnemies, heartEnemies, leftLungEnemies, rightLungEnemies, leftHandEnemies, rightHandEnemies, leftFootEnemies, rightFootEnemies, sexOrganEnemies;
     public int chestEnemies;
     [SerializeField] private int maxHealth;
@@ -23,25 +25,15 @@ public class Health : MonoBehaviour
 
     void Start()
     {
-        maxHealth = 1000;
+        maxHealth = 800;
         currentHealth = maxHealth;
     }
 
 
     void Update()
     {
-        rightHandEnemies = bodyParts[0].GetComponent<EnemySpawnManager>().enemyCount;
-        leftHandEnemies = bodyParts[1].GetComponent<EnemySpawnManager>().enemyCount;
-        brainEnemies = bodyParts[2].GetComponent<EnemySpawnManager>().enemyCount;
-        leftFootEnemies = bodyParts[3].GetComponent<EnemySpawnManager>().enemyCount;
-        rightFootEnemies = bodyParts[4].GetComponent<EnemySpawnManager>().enemyCount;
-        leftLungEnemies = bodyParts[5].GetComponent<EnemySpawnManager>().enemyCount;
-        rightLungEnemies = bodyParts[6].GetComponent<EnemySpawnManager>().enemyCount;
-        sexOrganEnemies = bodyParts[7].GetComponent<EnemySpawnManager>().enemyCount;
-        heartEnemies = bodyParts[8].GetComponent<EnemySpawnManager>().enemyCount;
-
-        chestEnemies = bodyParts[8].GetComponent<EnemySpawnManager>().enemyCount +
-        bodyParts[5].GetComponent<EnemySpawnManager>().enemyCount + bodyParts[6].GetComponent<EnemySpawnManager>().enemyCount;
+        CountBodyPartsForAnimate();
+        FindBodyParts();
 
         if (currentHealth >= 0)
         {
@@ -51,18 +43,6 @@ public class Health : MonoBehaviour
         {
             SceneManager.LoadScene(5);
         }
-
-        // Find total enemy count to set HeartBeat Animation speed
-        totalEnemyCount = 
-        bodyParts[0].GetComponent<EnemySpawnManager>().enemyCount + 
-        bodyParts[1].GetComponent<EnemySpawnManager>().enemyCount + 
-        bodyParts[2].GetComponent<EnemySpawnManager>().enemyCount +
-        bodyParts[3].GetComponent<EnemySpawnManager>().enemyCount +
-        bodyParts[4].GetComponent<EnemySpawnManager>().enemyCount +
-        bodyParts[5].GetComponent<EnemySpawnManager>().enemyCount +
-        bodyParts[6].GetComponent<EnemySpawnManager>().enemyCount +
-        bodyParts[7].GetComponent<EnemySpawnManager>().enemyCount +
-        bodyParts[8].GetComponent<EnemySpawnManager>().enemyCount;
     }
 
 
@@ -97,5 +77,36 @@ public class Health : MonoBehaviour
                 }
             }           
         }
+    }
+
+    void FindBodyParts()
+    {
+        rightHandEnemies = bodyParts[0].GetComponent<EnemySpawnManager>().enemyCount;
+        leftHandEnemies = bodyParts[1].GetComponent<EnemySpawnManager>().enemyCount;
+        brainEnemies = bodyParts[2].GetComponent<EnemySpawnManager>().enemyCount;
+        leftFootEnemies = bodyParts[3].GetComponent<EnemySpawnManager>().enemyCount;
+        rightFootEnemies = bodyParts[4].GetComponent<EnemySpawnManager>().enemyCount;
+        leftLungEnemies = bodyParts[5].GetComponent<EnemySpawnManager>().enemyCount;
+        rightLungEnemies = bodyParts[6].GetComponent<EnemySpawnManager>().enemyCount;
+        sexOrganEnemies = bodyParts[7].GetComponent<EnemySpawnManager>().enemyCount;
+        heartEnemies = bodyParts[8].GetComponent<EnemySpawnManager>().enemyCount;
+
+        chestEnemies = bodyParts[8].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[5].GetComponent<EnemySpawnManager>().enemyCount + bodyParts[6].GetComponent<EnemySpawnManager>().enemyCount;
+    }
+
+
+    void CountBodyPartsForAnimate()
+    {
+        totalEnemyCount =
+        bodyParts[0].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[1].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[2].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[3].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[4].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[5].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[6].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[7].GetComponent<EnemySpawnManager>().enemyCount +
+        bodyParts[8].GetComponent<EnemySpawnManager>().enemyCount;
     }
 }

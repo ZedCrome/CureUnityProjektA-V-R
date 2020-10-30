@@ -49,7 +49,7 @@ public class PlayerShoot : MonoBehaviour
 
             if (emissionRate > 50)
             {
-                emissionRate = emissionRate - 15;
+                emissionRate = emissionRate - 30;
                 emission.rateOverTime = emissionRate;
 
                 GameObject newBullet = Instantiate(bulletPrefab, gun.transform.position, gun.transform.rotation);
@@ -67,7 +67,7 @@ public class PlayerShoot : MonoBehaviour
 
             if (regenTimer < Time.time)
             {
-                emissionRate += 30;
+                emissionRate += 50;
                 emission.rateOverTime = emissionRate;
 
                 regenTimer = Time.time + coolDownPeriod;

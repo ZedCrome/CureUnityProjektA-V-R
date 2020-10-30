@@ -198,6 +198,10 @@ PrefabInstance:
       propertyPath: maxSpawnTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: time
+      value: 
+      objectReference: {fileID: 1128084187}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: LeftLung
@@ -2402,6 +2406,10 @@ PrefabInstance:
       propertyPath: maxSpawnTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: time
+      value: 
+      objectReference: {fileID: 1128084187}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: LeftFoot
@@ -7135,6 +7143,10 @@ PrefabInstance:
       propertyPath: maxSpawnTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: time
+      value: 
+      objectReference: {fileID: 1128084187}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: SexOrgan
@@ -8046,6 +8058,10 @@ PrefabInstance:
       propertyPath: maxSpawnTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: time
+      value: 
+      objectReference: {fileID: 1128084187}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: LeftHand
@@ -8887,6 +8903,10 @@ PrefabInstance:
       propertyPath: maxSpawnTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: time
+      value: 
+      objectReference: {fileID: 1128084187}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: Brain
@@ -14958,9 +14978,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1000
+  m_MaxValue: 800
   m_WholeNumbers: 0
-  m_Value: 1000
+  m_Value: 8
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -15703,6 +15723,10 @@ PrefabInstance:
       propertyPath: maxSpawnTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: time
+      value: 
+      objectReference: {fileID: 1128084187}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: RightLung
@@ -16892,6 +16916,10 @@ PrefabInstance:
       propertyPath: maxSpawnTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: time
+      value: 
+      objectReference: {fileID: 1128084187}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: Heart
@@ -17114,6 +17142,10 @@ PrefabInstance:
       propertyPath: maxSpawnTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: time
+      value: 
+      objectReference: {fileID: 1128084187}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: m_Name
       value: RightFoot
@@ -17955,6 +17987,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
       propertyPath: timeCounter
+      value: 
+      objectReference: {fileID: 1128084187}
+    - target: {fileID: 603369945499824361, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
+      propertyPath: time
       value: 
       objectReference: {fileID: 1128084187}
     - target: {fileID: 603369945499824367, guid: f17f25c2f1b7b424c89f2301920417d9, type: 3}
